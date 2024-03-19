@@ -21,18 +21,36 @@ echo "<br><br>";
 $quantity = 0;
 $aliments = $_POST['aliments'];
 foreach ($aliments as $aliment) {
-    $aliment['quantite'] = intval($aliment['quantite']);
-    $aliment['boxId'] = intval($id);
-    $quantity += intval($aliment['quantite']);
-    $aliment_json = json_encode($aliment);
-    echo $aliment_json;
-    echo "<br><br>";
-    // $put_data_al = callAPI('PUT', 'http://localhost:3000/box/aliments/'.intval($id), $aliment_json);
-    // echo $put_data_al;
+    if ($aliment['id'] == 'new') {
+        echo 'POST';
+        $aliment['quantite'] = intval($aliment['quantite']);
+        $aliment['boxId'] = intval($id);
+        $quantity += intval($aliment['quantite']);
+
+        $aliment_array = array(
+            "nom" => $aliment['nom'],
+            "quantite" => $aliment['quantite'],
+            "boxId" => $aliment['boxId']
+        );
+
+        $aliment_json = json_encode($aliment_array);
+        echo $aliment_json;
+        echo "<br><br>";
+        $put_data_al = callAPI('POST', 'http://localhost:3000/box/aliments/', $aliment_json);
+        echo $put_data_al;
+    } else {
+        echo 'PUT';
+        $aliment['quantite'] = intval($aliment['quantite']);
+        $aliment['boxId'] = intval($id);
+        $quantity += intval($aliment['quantite']);
+        $aliment_json = json_encode($aliment);
+        echo $aliment_json;
+        echo "<br><br>";
+        $put_data_al = callAPI('PUT', 'http://localhost:3000/box/aliments/'.intval($id), $aliment_json);
+        echo $put_data_al;
+    }
 }
 
-
-///////////  Pas réussi a faire la modif d'aliments/saveurs car je ne récup pas l'id de la ligne  /////////////
 
 echo "<br>";
 echo "Quantity : $quantity";
@@ -41,12 +59,28 @@ echo "<br><br>";
 // mise en place du tableau de json pour la mise a jour des aliments les nom ont été inversé
 $saveurs = $_POST['saveurs'];
 foreach ($saveurs as $saveur) {
-    $saveur['boxId'] = intval($id);
-    $saveur_json = json_encode($saveur);
-    echo $saveur_json;
-    echo "<br><br>";
-    // $put_data_sav = callAPI('PUT', 'http://localhost:3000/box/saveurs/'.intval($id), $saveur_json);
-    // echo $put_data_sav;
+
+    if($saveur['id']=='new'){
+        echo "POST";
+        $saveur['boxId'] = intval($id);
+        $saveur_array = array(
+            "nom" => $saveur['nom'],
+            "boxId" => $saveur['boxId']
+        );
+        $saveur_json = json_encode($saveur_array);
+        echo $saveur_json;
+        echo "<br><br>";
+        $put_data_sav = callAPI('POST', 'http://localhost:3000/box/saveurs/', $saveur_json);
+        echo $put_data_sav;
+    }else{
+        echo "PUT";
+        $saveur['boxId'] = intval($id);
+        $saveur_json = json_encode($saveur);
+        echo $saveur_json;
+        echo "<br><br>";
+        $put_data_sav = callAPI('PUT', 'http://localhost:3000/box/saveurs/'.intval($id), $saveur_json);
+        echo $put_data_sav;
+    }
 }
 
 
@@ -54,12 +88,12 @@ $info = array(
     "nom" => $nom,
     "pieces" => $quantity,
     "prix" => floatval($prix),
-    "image" => $image//,
+    "image" => $image //,
     //"categorie" => $categorie
 );
 $info_box = json_encode($info);
 
-$put_data_box = callAPI('PUT', 'http://localhost:3000/box/'.intval($id), $info_box);
+$put_data_box = callAPI('PUT', 'http://localhost:3000/box/' . intval($id), $info_box);
 echo $put_data_box;
 
-// header('Location: index.php');
+header('Location: box.php');

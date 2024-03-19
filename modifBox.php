@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <a href="index.php">BACK</a>
+    <a href="box.php">BACK</a>
     <br>
     <br>
     <form action="_modifBox.php" method="post">
@@ -34,12 +34,14 @@
             <input name="id" type="hidden" value="<?= $id ?>">
             <p>Aliments :</p>
             <p onclick="addAl()">+</p>
+            <p onclick="supprAl()">-</p>
             <div id="containerAllAl">
                 <?php
                 foreach ($item['aliments'] as $key => $aliment) {
                 ?>
                     <div class="container_al">
-                        <input name="aliments[<?= $key ?>][nom]" type="text" value="<?= $aliment['nom'] ?>">
+                        <input type="hidden" oninput="verify()" name="aliments[<?= $key ?>][id]" value="<?= $aliment['id'] ?>">
+                        <input name="aliments[<?= $key ?>][nom]" oninput="verify()" type="text" value="<?= $aliment['nom'] ?>">
                         <input name="aliments[<?= $key ?>][quantite]" type="number" value="<?= $aliment['quantity'] ?>">
                     </div>
                     <br>
@@ -51,12 +53,14 @@
                 ?>
 
                 <p onclick="addSav()">+</p>
+                <p onclick="supprSav()">-</p>
                 <div id="containerAllSav">
                     <?php
                     foreach ($item['saveurs'] as $key => $saveur) {
                     ?>
-                        <div id="container_sav">
-                            <input name="saveurs[<?= $key ?>][nom]" type="text" value="<?= $saveur['nom'] ?>"><br>
+                        <div class="container_sav">
+                            <input type="hidden" name="saveurs[<?= $key ?>][id]" value="<?= $saveur['id'] ?>">
+                            <input oninput="verify()" name="saveurs[<?= $key ?>][nom]" type="text" value="<?= $saveur['nom'] ?>"><br>
                         </div>
 
                 <?php
@@ -64,9 +68,10 @@
                 }
                 ?>
                 </div>
-                <input type="submit" value="Soumettre">
+                <input id="submit" type="submit" value="Soumettre">
     </form>
-    <script src="js/modifBox.js"></script>
+    <script src="js/modifBox.js?time=<?php require 'UID.php';
+                                        echo UID(200) ?>"></script>
 </body>
 
 </html>
