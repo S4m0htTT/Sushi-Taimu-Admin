@@ -88,8 +88,8 @@ $info = array(
     "nom" => $nom,
     "pieces" => $quantity,
     "prix" => floatval($prix),
-    "image" => $image //,
-    //"categorie" => $categorie
+    "image" => $image ,
+    "categorie" => $categorie
 );
 $info_box = json_encode($info);
 
