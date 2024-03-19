@@ -10,5 +10,5 @@ HTML, CSS, PHP
 
 ## Auteur
 
-- [Thomas henry](https://github.com/S4m0htTT)
-
+- Back-end : [Thomas henry](https://github.com/S4m0htTT)
+- Front-end : [Glenn Guillard](https://github.com/Glenn-Guillard-MMI)
