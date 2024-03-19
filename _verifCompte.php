@@ -8,7 +8,7 @@ $mdpAdmin = "admin";
 
 if ($login === $loginAdmin && $mdp === $mdpAdmin){
     session_start();
-    $_SESSION['connecte'] = true;
+    $_SESSION['connecte'] == 1;
     header('Location: accueil.php');
 }else{
     header('Location: index.php');

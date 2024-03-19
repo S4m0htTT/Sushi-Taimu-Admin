@@ -100,11 +100,8 @@ function supprSav() {
 // inputs.forEach(function(input){
 //     input.addEventListener('input', verify());
 // });
-var a = 1;
 
 function verify() {
-    console.log(a);
-    a++;
     var inputs = document.querySelectorAll('input[type="text"], input[type="number"]');
     var isEmpty = false;
 
