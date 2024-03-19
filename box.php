@@ -1,3 +1,7 @@
+<?php
+require 'function.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -44,6 +48,7 @@
     $get_data = callAPI('GET', 'http://localhost:3000/box', false); 
     $data = json_decode($get_data, true);
     ?>
+    <a href="accueil.php">Back</a>
     <a href="ajoutBox.php">Ajouter Box</a>
     <table>
         <thead>
@@ -76,8 +81,6 @@
             ?>
         </tbody>
     </table>
-
-    <a href="testAPI.php">Call API TEST</a>
 </body>
 
 </html>
