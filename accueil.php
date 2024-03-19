@@ -10,7 +10,7 @@ require 'function.php';
     <title>Accueil</title>
 </head>
 <body>
-    <a href="#">Commande</a>
+    <a href="commande.php">Commande</a>
     <a href="box.php">Box</a>
     <a href="boisson.php">Boisson</a>
 </body>
