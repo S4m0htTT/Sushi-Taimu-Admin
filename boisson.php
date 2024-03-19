@@ -1,14 +1,12 @@
 <?php
 require 'function.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box - Sushi Taimu</title>
+    <title>Boisson - Sushi Taimu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,25 +39,20 @@ require 'function.php';
         }
     </style>
 </head>
-
 <body>
-    <?php
+<?php
     require_once 'callAPI.php';
-    $get_data = callAPI('GET', 'http://localhost:3000/box', false); 
+    $get_data = callAPI('GET', 'http://localhost:3000/boissons', false); 
     $data = json_decode($get_data, true);
     ?>
     <a href="accueil.php">Back</a>
-    <a href="ajoutBox.php">Ajouter Box</a>
+    <a href="">Ajouter Boisson</a>
     <table>
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>Prix</th>
-                <th>Pièces</th>
-                <th>Catégorie</th>
-                <th>Option</th>
-            </tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Option</th>
         </thead>
         <tbody>
             <?php
@@ -69,11 +62,9 @@ require 'function.php';
                     <th><?= $key['id'] ?></th>
                     <th><?= $key['nom'] ?></th>
                     <th><?= $key['prix'] ?></th>
-                    <th><?= $key['pieces'] ?></th>
-                    <th><?= $key['categorie'] ?></th>
                     <th>
-                        <a href="modifBox.php?id=<?= $key['id'] ?>"><img src="icon/pen.svg" alt="modifier"></a>
-                        <a href="_delBox.php?id=<?= $key['id'] ?>"><img src="icon/trash.svg" alt="supprimer"></a>
+                        <a href="modifBoisson.php?id=<?= $key['id'] ?>"><img src="icon/pen.svg" alt="modifier"></a>
+                        <a href="_delBoisson.php?id=<?= $key['id'] ?>"><img src="icon/trash.svg" alt="supprimer"></a>
                     </th>
                 </tr>
             <?php
@@ -82,5 +73,4 @@ require 'function.php';
         </tbody>
     </table>
 </body>
-
 </html>
