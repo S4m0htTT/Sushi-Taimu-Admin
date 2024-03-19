@@ -8,7 +8,7 @@ Production de la partie admin du projet [Sushi Taimu](https://github.com/Glenn-G
 HTML, CSS, PHP
 
 
-## Contributeur
+## Contributeurs
 
 - Back-end : [Thomas henry](https://github.com/S4m0htTT)
 - Front-end : [Glenn Guillard](https://github.com/Glenn-Guillard-MMI)
