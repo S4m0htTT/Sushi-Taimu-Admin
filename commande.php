@@ -48,7 +48,6 @@ require_once 'callAPI.php';
 </head>
 
 <body>
-
     <?php
     $get_com = callAPI('GET', 'http://localhost:3000/commandes', false);
     // echo "<pre>";

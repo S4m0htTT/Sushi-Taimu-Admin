@@ -6,9 +6,9 @@ $mdp = $_POST['mdp'];
 $loginAdmin = "admin";
 $mdpAdmin = "admin";
 
-if ($login === $loginAdmin && $mdp === $mdpAdmin){
+if ($login == $loginAdmin && $mdp == $mdpAdmin){
     session_start();
-    $_SESSION['connecte'] == 1;
+    $_SESSION['connecte'] = 1;
     header('Location: accueil.php');
 }else{
     header('Location: index.php');
