@@ -1,0 +1,30 @@
+#container-deco {
+    justify-content: space-between !important;
+    flex-direction: row-reverse;
+    margin: 3em auto;
+}
+
+#back {
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    transition: background 0.25s ease-in-out;
+}
+
+#back:hover {
+    background-color: #FEF0E0;
+}
+
+#add {
+    background: #DC6157;
+    color: #FEF0E0;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.25s ease-out;
+}
+
+#add:hover {
+    background: #90322B;
+}

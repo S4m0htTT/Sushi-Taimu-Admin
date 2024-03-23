@@ -13,6 +13,7 @@ $id = intval($_GET['id']);
 </head>
 
 <body>
+    <a href="boisson.php">Retour</a>
     <form action="_modifBoisson.php" method="post">
         <?php
         $data = array(

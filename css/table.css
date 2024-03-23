@@ -5,23 +5,24 @@ body {
 table {
     width: 75%;
     border-collapse: collapse;
-    border: 2px solid #ddd;
+    border: 2px solid #333;
     margin: 0 auto;
-}
-
-#th{
-    color: blue;
+    margin-bottom: 2em;
 }
 
 th,
 td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-#th th{
-    background-color: #e0e0e0;
+tr {
+    border-bottom: 1px solid #333;
+}
+
+.thead th {
+    background-color: #333;
+    color: #FEF0E0;
 }
 
 th p {
@@ -29,13 +30,14 @@ th p {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #FEF0E0;
 }
 
-.ligne:nth-child(even) th {
-    background-color: #f5f5f5;
+.option {
+    display: flex;
+    flex-direction: row;
 }
 
-.ligne:hover th {
-    background-color: #e0e0e0;
+.option p {
+    cursor: pointer;
 }

@@ -9,13 +9,39 @@ require 'function.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+    <link rel="stylesheet" href="css/style.css?time=<?php require 'UID.php';
+                                                    echo UID(200) ?>">
+    <link rel="stylesheet" href="css/accueil.css?time=<?php echo UID(200) ?>">
 </head>
 
 <body>
-    <a href="deconnexion.php">Déconnexion</a>
-    <a href="commande.php">Commande</a>
-    <a href="box.php">Box</a>
-    <a href="boisson.php">Boisson</a>
+    <section id="bg"></section>
+    <section id="container_g">
+        <?php require 'nav.html' ?>
+        <div id="container-deco">
+            <a id="deco" href="deconnexion.php">Déconnexion</a>
+        </div>
+        <div id="choix">
+            <a href="commande.php">
+                <div>
+                    <img src="icon/commande.svg" alt="Commande">
+                    <p>Commandes</p>
+                </div>
+            </a>
+            <a href="box.php">
+                <div>
+                    <img id="box" src="icon/box.svg" alt="Box">
+                    <p>Gestion des boxes</p>
+                </div>
+            </a>
+            <a href="boisson.php">
+                <div>
+                    <img id="boisson" src="icon/boisson.svg" alt="boisson">
+                    <p>Gestion des boissons</p>
+                </div>
+            </a>
+        </div>
+    </section>
 </body>
 
 </html>

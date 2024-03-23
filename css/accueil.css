@@ -1,0 +1,45 @@
+#choix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75%;
+    height: 100%;
+    margin: 5em auto;
+}
+
+#choix a {
+    width: 25%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+    border-radius: 20px;
+}
+
+#choix a div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+#choix a div img{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#box{
+    width: 50% !important;
+}
+
+#boisson{
+    width: 50% !important;
+}
+
+#choix a div p {
+    margin-top: 2em;
+    color: #FEF0E0;
+    text-align: center;
+}

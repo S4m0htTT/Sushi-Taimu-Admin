@@ -1,0 +1,35 @@
+.view{
+    text-decoration: none;
+    color: #DC6157;
+    transition: color 0.15s ease-in-out;
+}
+
+.view:hover{
+    text-decoration: underline;
+    color: #90322B;
+}
+
+#container-deco{
+    justify-content: space-between !important;
+    flex-direction: row-reverse;
+    margin: 3em auto;
+}
+
+#back {
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    transition: background 0.25s ease-in-out;
+}
+
+#back:hover {
+    background-color: #FEF0E0;
+}
+h1{
+    text-align: center;
+}
+h2{
+    width: 75%;
+    margin: 0.5em auto;
+}

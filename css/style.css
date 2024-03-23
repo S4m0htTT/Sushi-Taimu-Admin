@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Hiragino;
+    src: url("../font/Hiragino_Sans.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hiragino';
+    color: #333;
+}
+
+body {
+    background: #FEF0E0;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+#bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("../img/fond.jpg");
+    background-position: center;
+    background-size: 200% 200%;
+    background-repeat: repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+#container_g {
+    position: relative;
+    z-index: 10;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+nav {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    width: fit-content;
+    height: 90%;
+}
+
+nav a img {
+    height: 100%;
+}
+
+#deco {
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    transition: background 0.25s ease-in-out;
+}
+
+#deco:hover {
+    background-color: #FEF0E0;
+}
+
+#container-deco{
+    display: flex;
+    justify-content: right;
+    width: 90%;
+    margin: 1em auto;
+}

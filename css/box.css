@@ -1,0 +1,134 @@
+#container-deco {
+    justify-content: space-between !important;
+    flex-direction: row-reverse;
+    margin: 3em auto;
+}
+
+#back {
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    transition: background 0.25s ease-in-out;
+}
+
+#back:hover {
+    background-color: #FEF0E0;
+}
+
+#add {
+    background: #DC6157;
+    color: #FEF0E0;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.25s ease-out;
+}
+
+#add:hover {
+    background: #90322B;
+}
+
+#bg2{
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.166);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    display: none;
+    z-index: 20;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FEF0E0;
+    width: 35vw;
+    height: 25vh;
+    border-radius: 15px;
+    border: 2px solid #DC6157;
+    padding: 1em;
+    z-index: 20;
+    display: none;
+}
+
+.bgConfirm {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url("../img/fond.jpg");
+    background-position: center;
+    background-size: 200% 200%;
+    background-repeat: repeat;
+    opacity: 0.3;
+    z-index: 25;
+}
+
+.container-confirm {
+    z-index: 35;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container-confirm p,
+.container-confirm a {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.containerBuConf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75%;
+    margin: 1em auto 0 auto;
+    color: #333;
+}
+
+.containerBuConf p,
+.containerBuConf a {
+    width: fit-content;
+}
+
+.confBu {
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    background: #DC6157;
+    color: #FEF0E0;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+
+.annBu:hover {
+    background: #FEF0E0;
+}
+
+.confBu:hover {
+    background: #90322B;
+}
+
+.annBu {
+    border: 2px solid #333;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
