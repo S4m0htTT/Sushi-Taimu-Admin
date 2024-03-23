@@ -46,6 +46,8 @@ require 'function.php';
     $data = json_decode($get_data, true);
     ?>
     <a href="accueil.php">Back</a>
+    <a href="deconnexion.php">Déconnexion</a>
+
     <a href="ajoutBoisson.php">Ajouter Boisson</a>
     <table>
         <thead>

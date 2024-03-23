@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="boisson.php">Back</a>
     <form action="_ajoutBoisson.php" method="post">
         <input type="file" id="file" name="file" accept="image/png">
         <input type="text" id="nom" name="nom" placeholder="nom :">

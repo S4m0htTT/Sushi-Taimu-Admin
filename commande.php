@@ -56,6 +56,7 @@ require_once 'callAPI.php';
     $get_com = json_decode($get_com, true);
     ?>
     <a href="accueil.php">Back</a>
+    <a href="deconnexion.php">Déconnexion</a>
     <table>
         <thead>
             <tr>
@@ -63,6 +64,7 @@ require_once 'callAPI.php';
                 <th>Date</th>
                 <th>Prix</th>
                 <th>statut</th>
+                <th>Détail</th>
                 <th>Option</th>
             </tr>
         </thead>
@@ -78,6 +80,9 @@ require_once 'callAPI.php';
                     <th><?= $date ?></th>
                     <th><?= $com['prix'] ?></th>
                     <th><?= $com['statut'] ?></th>
+                    <th>
+                        <a href="viewcomm.php?id=<?= $com['id'] ?>">Voir la commade</a>
+                    </th>
                     <th>
                         <?php
                         if ($com['statut'] == 0) {

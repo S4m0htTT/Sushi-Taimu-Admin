@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <a href="box.php">Back</a>
     <form action="_ajoutBox.php" method="post">
         <input oninput="verify()" type="file" id="file" name="file" accept="image/png">
         <input oninput="verify()" type="text" id="nom" name="nom" placeholder="nom :">
