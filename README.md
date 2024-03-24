@@ -10,5 +10,4 @@ HTML, CSS, PHP
 
 ## Contributeurs
 
-- Back-end : [Thomas henry](https://github.com/S4m0htTT)
-- Front-end : [Glenn Guillard](https://github.com/Glenn-Guillard-MMI)
+- Back-end/Front-end : [Thomas henry](https://github.com/S4m0htTT)
