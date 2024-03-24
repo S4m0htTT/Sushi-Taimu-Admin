@@ -1,0 +1,123 @@
+#back {
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    transition: background 0.25s ease-in-out;
+}
+
+#back:hover {
+    background-color: #FEF0E0;
+}
+
+#container-deco {
+    justify-content: start;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin-top: 1em;
+}
+
+form {
+    width: 50%;
+    margin: 1em auto;
+}
+
+.infoG {
+    margin-top: 0.3em;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.infoG input {
+    background: transparent;
+    margin-left: 1em;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+.container_al,
+.container_sav {
+    margin-top: 0.5em;
+}
+
+.container_al input,
+.container_sav input {
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+input[type="submit"] {
+    font-size: 1.3em;
+    background: #DC6157;
+    cursor: pointer;
+    border: none;
+    padding: 0.4em 1em;
+    border-radius: 10px;
+    color: #FEF0E0;
+    transition: background 0.25s ease-in-out;
+    margin-top: 1.5em;
+}
+
+input[type="submit"]:hover {
+    background: #90322B;
+}
+
+input[type="submit"]:disabled {
+    background: #90322B;
+    cursor: not-allowed;
+}
+
+#divFile{
+    margin: 0.7em 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#divFile p {
+    margin-left: 1em;
+}
+
+.input-file {
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.input-file input[type="file"] {
+    display: none;
+}
+
+.optionAj {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}
+
+.optionAj p {
+    cursor: pointer;
+    background: #DC6157;
+    color: #FEF0E0;
+    font-size: 1.5em;
+    border-radius: 50%;
+    width: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionAj p:last-child {
+    margin-left: 1em;
+}

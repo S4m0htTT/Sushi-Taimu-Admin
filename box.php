@@ -8,6 +8,7 @@ require 'function.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/Logo_Sushi_Taimu.svg">
     <title>Box - Sushi Taimu</title>
     <link rel="stylesheet" href="css/style.css?time=<?php require 'UID.php';
                                                     echo UID(200) ?>">
@@ -31,7 +32,7 @@ require 'function.php';
             </div>
             <div>
                 <a id="back" href="accueil.php">Retour</a>
-                <a id="add" href="ajoutBox.php">Ajouter une boxe</a>
+                <a id="add" href="ajoutBox.php">Ajouter une box</a>
             </div>
         </div>
 

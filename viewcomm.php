@@ -19,6 +19,7 @@ $get_data = json_decode($get_data, true);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/Logo_Sushi_Taimu.svg">
     <link rel="stylesheet" href="css/style.css?time=<?php require 'UID.php';
                                                     echo UID(200) ?>">
     <link rel="stylesheet" href="css/table.css?time=<?php echo UID(200) ?>">

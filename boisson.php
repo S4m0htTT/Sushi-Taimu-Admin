@@ -8,6 +8,8 @@ require 'function.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boisson - Sushi Taimu</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo_Sushi_Taimu.svg">
+
     <link rel="stylesheet" href="css/style.css?time=<?php require 'UID.php';
                                                     echo UID(200) ?>">
     <link rel="stylesheet" href="css/table.css?time=<?php echo UID(200) ?>">
@@ -49,7 +51,7 @@ require 'function.php';
                         <th><?= $key['id'] ?></th>
                         <th><?= $key['nom'] ?></th>
                         <th><?= $key['prix'] ?></th>
-                        <th>
+                        <th class="option">
                             <a href="modifBoisson.php?id=<?= $key['id'] ?>"><img src="icon/pen.svg" alt="modifier"></a>
                             <a href="_delBoisson.php?id=<?= $key['id'] ?>"><img src="icon/trash.svg" alt="supprimer"></a>
                         </th>

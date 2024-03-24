@@ -14,11 +14,21 @@ function addAl() {
     if (allInputsFilled) {
         var newContainer = document.createElement('div');
         newContainer.className = 'container_al';
+
+        var newLabelNom = document.createElement('label');
+        newLabelNom.textContent = 'Nom : ';
+        newLabelNom.setAttribute('for', 'aliments[' + containers.length + '][nom]')
+
         var newInputNom = document.createElement('input');
         newInputNom.setAttribute('name', 'aliments[' + containers.length + '][nom]');
         newInputNom.setAttribute('type', 'text');
         newInputNom.setAttribute('value', '');
         newInputNom.setAttribute('oninput', 'verify()');
+
+        var newLabelQuantity = document.createElement('label');
+        newLabelQuantity.textContent = 'Quantité : ';
+        newLabelQuantity.setAttribute('for','aliments[' + containers.length + '][quantite]' );
+
         var newInputQuantite = document.createElement('input');
         newInputQuantite.setAttribute('name', 'aliments[' + containers.length + '][quantite]');
         newInputQuantite.setAttribute('type', 'number');
@@ -30,12 +40,14 @@ function addAl() {
         newInputId.setAttribute('type', 'hidden');
         newInputId.setAttribute('value', 'new');
 
-        newContainer.appendChild(newInputNom);
-        newContainer.appendChild(newInputQuantite);
         newContainer.appendChild(newInputId);
+        newContainer.appendChild(newLabelNom);
+        newContainer.appendChild(newInputNom);
+        newContainer.appendChild(newLabelQuantity);
+        newContainer.appendChild(newInputQuantite);
         containerAll.appendChild(newContainer);
     } else {
-        alert('Tous les champs d\'entrée doivent être remplis.');
+        return;
     }
     verify();
 }
@@ -44,17 +56,23 @@ function addSav() {
     var containers = document.querySelectorAll('#containerAllSav .container_sav');
     var allInputsFilled = true;
     containers.forEach(function (container) {
-        var input = container.querySelector('input');
-        if (input.value.trim() === '') {
-            allInputsFilled = false;
-        }
+        var inputs = container.querySelectorAll('input');
+        inputs.forEach(function (input) {
+            if (input.value.trim() === '') {
+                allInputsFilled = false;
+            }
+        });
     });
 
     if (allInputsFilled) {
         var newContainer = document.createElement('div');
         newContainer.className = 'container_sav';
-        var newInputNom = document.createElement('input');
 
+        var newLabelNom = document.createElement('label');
+        newLabelNom.textContent = 'Nom : ';
+        newLabelNom.setAttribute('for', 'saveurs[' + containers.length + '][nom]');
+
+        var newInputNom = document.createElement('input');
         newInputNom.setAttribute('name', 'saveurs[' + containers.length + '][nom]');
         newInputNom.setAttribute('type', 'text');
         newInputNom.setAttribute('value', '');
@@ -65,11 +83,13 @@ function addSav() {
         newInputId.setAttribute('type', 'hidden');
         newInputId.setAttribute('value', 'new');
 
+
         newContainer.appendChild(newInputId);
+        newContainer.appendChild(newLabelNom);
         newContainer.appendChild(newInputNom);
         document.getElementById('containerAllSav').appendChild(newContainer);
     } else {
-        alert('Tous les champs d\'entrée doivent être remplis.');
+        return;
     }
     verify();
 }
@@ -80,26 +100,21 @@ function supprAl() {
     if (divs.length > 1) {
         container.removeChild(divs[divs.length - 1]);
     } else {
-        alert("Vous devez en laisser au moins un aliment.");
+        return;
     }
     verify();
 }
 
 function supprSav() {
     var container = document.getElementById('containerAllSav');
-    var divs = container.querySelectorAll('#container_sav');
+    var divs = container.getElementsByClassName('container_sav');
     if (divs.length > 1) {
         container.removeChild(divs[divs.length - 1]);
     } else {
-        alert("Vous devez en laisser au moins une saveur.");
+        return;
     }
     verify();
 }
-
-// var inputs = document.querySelectorAll('input[type="text"], input[type="number"]');
-// inputs.forEach(function(input){
-//     input.addEventListener('input', verify());
-// });
 
 function verify() {
     var inputs = document.querySelectorAll('input[type="text"], input[type="number"]');

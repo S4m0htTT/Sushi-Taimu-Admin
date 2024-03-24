@@ -87,3 +87,14 @@ function verify() {
     }
 }
 verify();
+
+
+function fileVerif(){
+    const input = document.getElementById('file');
+    const fichier = input.files[0];
+    if (fichier) {
+        console.log("Le fichier a été sélectionné : " + fichier.name);
+    } else {
+        console.log("Aucun fichier sélectionné");
+    }
+}
