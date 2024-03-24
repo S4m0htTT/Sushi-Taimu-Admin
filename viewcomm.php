@@ -56,11 +56,11 @@ $get_data = json_decode($get_data, true);
                     foreach ($box as $box_item) {
                         if ($box_item != null) {
                 ?>
-                            <tr class="ligne">
-                                <th><?= $box_item['id'] ?></th>
-                                <th><?= $box_item['nom'] ?></th>
-                                <th><?= $box_item['pieces'] ?></th>
-                            </tr>
+                <tr class="ligne">
+                    <th><?= $box_item['id'] ?></th>
+                    <th><?= $box_item['nom'] ?></th>
+                    <th><?= $box_item['pieces'] ?></th>
+                </tr>
                 <?php
                         }
                     }
@@ -81,12 +81,14 @@ $get_data = json_decode($get_data, true);
                 foreach ($get_data as $item) {
                     $box = $item['commande']['boisson'];
                     foreach ($box as $box_item) {
+                        if ($box_item != null) {
                 ?>
-                        <tr class="ligne">
-                            <th><?= $box_item['id'] ?></th>
-                            <th><?= $box_item['nom'] ?></th>
-                        </tr>
-                <?php
+                <tr class="ligne">
+                    <th><?= $box_item['id'] ?></th>
+                    <th><?= $box_item['nom'] ?></th>
+                </tr>
+                <?php 
+                }
                     }
                 }
                 ?>
